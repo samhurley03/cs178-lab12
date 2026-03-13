@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page_title }}</title>
+    <style>
+        body {
+            font-family: monospace;
+            max-width: 800px;
+            margin: 60px auto;
+            padding: 0 20px;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        h1 {
+            font-size: 2em;
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+        }
+        a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .nav {
+            margin-top: 20px;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ============================================================
+         EXERCISE 4: This is your home page — feel free to customize
+         anything in this file: colors, fonts, text, layout, etc.
+         ============================================================ -->
+
+    <h1>My Flask Site</h1>  <!-- change this heading to something personal -->
+
+    <p>Welcome to my page, hosted on AWS EC2.</p>
+
+    <div class="nav">
+        <p>Try these routes:</p>
+        <ul>
+            <li><a href="/hello/YourName/">/hello/YourName/</a></li>
+            <li><a href="/analyze/Drake">/analyze/Drake</a></li>
+        </ul>
+    </div>
+
+</body>
+</html>
