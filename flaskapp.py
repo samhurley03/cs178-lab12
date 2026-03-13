@@ -32,22 +32,28 @@ def hello(name):
 
 # ---- Exercise 2: update your analyze route ----
 
+# ---- Exercise 3: update your analyze route ----
+
 @app.route('/analyze/<word>')
 def analyze(word):
     # Step 1: character count
     num_chars = len(word)
 
-    # Step 2: Count vowels (case insensitive)
+    # Step 2: count vowels (case insensitive)
     num_vowels = 0
     for char in word.lower():
         if char in ['a', 'e', 'i', 'o', 'u']:
             num_vowels += 1
 
-    # render_template passes all variables into analyze.html
+    # Step 3: reverse the word
+    reversed_word = word[::-1]
+
+    # pass all variables to the template
     return render_template('analyze.html',
                            word=word,
                            num_chars=num_chars,
-                           num_vowels=num_vowels)
+                           num_vowels=num_vowels,
+                           reversed_word=reversed_word)
 
 
 
